@@ -1,6 +1,10 @@
 # GradNet Alumni App
 GradNet is a mobile application designed for alumni to connect, reminisce, and stay updated with events and memories from their alma mater.
-
+## Built With
+### Flutter
+The app is built using the Flutter framework for cross-platform mobile development, allowing for a smooth and native-like user experience on both iOS and Android platforms.
+### Firebase
+The backend of the app is powered by Firebase, providing authentication, real-time database, and cloud storage functionalities. Firebase Firestore is used for storing user data, while Firebase Authentication handles user authentication.
 ## Features
 ### Profile Management
 #### Create Profile: Alumni can create their profile by providing necessary information such as name, email, graduation year, roll number, phone number, location, and industry.
