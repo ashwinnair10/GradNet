@@ -9,7 +9,7 @@ GradNet is a mobile application designed for alumni to connect, reminisce, and s
 #### Add Friends: Alumni can add friends by searching for their profiles.
 #### Remove Friends: Users can remove friends from their connections.
 ### Alumni Search
-Search Alumni: Alumni can search for other users based on various criteria such as name, graduation year, location, or industry.
+#### Search Alumni: Alumni can search for other users based on various criteria such as name, graduation year, location, or industry.
 ### Memories
 #### Add Memories: Users can add and share memories such as photos or written posts with their connections.
 ### Yearbook
