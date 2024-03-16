@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "507075046969",
+    "project_id": "alumniyearbook-1276f",
+    "storage_bucket": "alumniyearbook-1276f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507075046969:android:4535142b7b6c5df40867e8",
+        "android_client_info": {
+          "package_name": "com.example.alumniyearbook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzcvsllfFnIphI6uE2AHMiEDEPgyA-KsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
