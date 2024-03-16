@@ -13,7 +13,7 @@ Search Alumni: Alumni can search for other users based on various criteria such 
 ### Memories
 #### Add Memories: Users can add and share memories such as photos or written posts with their connections.
 ### Yearbook
-View Yearbook: Alumni can view and download the digital yearbook of any year.
+#### View Yearbook: Alumni can view and download the digital yearbook of any year.
 ### Events
 #### View Events: Users can stay updated with upcoming events organized by the alma mater.
 ### Digital Repository
