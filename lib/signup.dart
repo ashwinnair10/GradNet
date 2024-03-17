@@ -23,6 +23,7 @@ class _SignUpPageState extends State<SignUpPage> {
       TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
   final TextEditingController loc = TextEditingController();
+  final TextEditingController ind = TextEditingController();
 
   Future<void> _signUpWithEmailAndPassword() async {
     try {
@@ -45,7 +46,8 @@ class _SignUpPageState extends State<SignUpPage> {
           'phone_number': _phoneNumberController.text,
           'place': loc.text, // Store phone number
           'url':
-              'https://t3.ftcdn.net/jpg/01/65/63/94/360_F_165639425_kRh61s497pV7IOPAjwjme1btB8ICkV0L.jpg'
+              'https://t3.ftcdn.net/jpg/01/65/63/94/360_F_165639425_kRh61s497pV7IOPAjwjme1btB8ICkV0L.jpg',
+          'industry': ind.text,
         });
 
         // Navigate to Dashboard on successful sign-up
@@ -182,6 +184,20 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 hintText: 'Location', // Add hint for phone number
                 labelText: 'Location', // Add label for phone number
+              ),
+            ),
+            SizedBox(height: 15),
+            TextField(
+              controller: ind,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+                hintText: 'Industry', // Add hint for phone number
+                labelText: 'Industry', // Add label for phone number
               ),
             ),
             SizedBox(height: 20),
