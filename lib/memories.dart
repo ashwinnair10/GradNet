@@ -154,6 +154,7 @@ class _MemoriesState extends State<Memories> {
                                                   userDoc['url'],
                                                   userDoc['place'],
                                                   userDoc['industry'],
+                                                  userDoc['phone_number'],
                                                 ),
                                               ),
                                             ),

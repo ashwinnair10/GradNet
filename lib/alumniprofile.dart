@@ -5,10 +5,18 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ProfilePage extends StatefulWidget {
-  final String alumniName, rollno, year, email, url, loc, ind;
+  final String alumniName, rollno, year, email, url, loc, ind, phone;
 
-  ProfilePage(this.alumniName, this.rollno, this.year, this.email, this.url,
-      this.loc, this.ind);
+  ProfilePage(
+    this.alumniName,
+    this.rollno,
+    this.year,
+    this.email,
+    this.url,
+    this.loc,
+    this.ind,
+    this.phone,
+  );
 
   @override
   _ProfilePageState createState() => _ProfilePageState();
@@ -210,7 +218,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     height: 10,
                   ),
                   Text(
-                    widget.alumniName,
+                    widget.phone,
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w700,

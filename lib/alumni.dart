@@ -110,6 +110,7 @@ class _AlumniState extends State<Alumni> {
                                     userData['url'],
                                     userData['place'],
                                     userData['industry'],
+                                    userData['phone_number'],
                                   ),
                                 ),
                               );
