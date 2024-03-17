@@ -60,7 +60,7 @@ Widget buildbutton(BuildContext context, Icon icon, String title) {
               ),
             ),
           },
-        if (title == 'Repo')
+        if (title == 'Repositories')
           {
             Navigator.push(
               context,

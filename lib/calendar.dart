@@ -128,9 +128,9 @@ class _CalendarPageState extends State<CalendarPage> {
         calendarType: CalendarType.GREGORIAN,
         events: events,
         calendarOptions: CalendarOptions(
-          headerMonthBackColor: Color.fromARGB(255, 208, 227, 255),
-          bottomSheetBackColor: Color.fromARGB(255, 208, 227, 255),
-          headerMonthElevation: 10,
+          headerMonthBackColor: Color.fromARGB(255, 228, 239, 255),
+          bottomSheetBackColor: Color.fromARGB(255, 220, 233, 252),
+          headerMonthElevation: 0,
           toggleViewType: true,
         ),
         headerOptions: HeaderOptions(
@@ -144,7 +144,7 @@ class _CalendarPageState extends State<CalendarPage> {
         dayOptions: DayOptions(
           showWeekDay: true,
           unselectedTextColor: Color.fromARGB(255, 1, 62, 133),
-          selectedBackgroundColor: Color.fromARGB(255, 216, 94, 37),
+          selectedBackgroundColor: Color.fromARGB(255, 1, 62, 133),
           selectedTextColor: Color.fromARGB(255, 208, 227, 255),
           weekDaySelectedColor: Colors.black,
           eventCounterColor: Colors.green,

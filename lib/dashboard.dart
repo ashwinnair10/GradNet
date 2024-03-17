@@ -150,7 +150,7 @@ class _DashboardState extends State<Dashboard> {
                           color: Color.fromARGB(255, 255, 255, 255),
                           size: 30,
                         ),
-                        'Repo',
+                        'Repositories',
                       ),
                       buildbutton(
                         context,

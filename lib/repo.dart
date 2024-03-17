@@ -112,7 +112,7 @@ class _RepoState extends State<Repo> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
-                color: Colors.black,
+                color: Color.fromARGB(255, 1, 62, 133),
               ),
             ),
             hintText: 'Title',
@@ -128,7 +128,7 @@ class _RepoState extends State<Repo> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
-                color: Colors.black,
+                color: Color.fromARGB(255, 1, 62, 133),
               ),
             ),
             hintText: 'Link',
@@ -215,12 +215,14 @@ class RepoSearchDelegate extends SearchDelegate {
   final List<Map<String, dynamic>> repos;
 
   RepoSearchDelegate(this.repos);
-
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-        icon: Icon(Icons.clear),
+        icon: Icon(
+          Icons.clear,
+          color: Color.fromARGB(255, 1, 62, 133),
+        ),
         onPressed: () {
           query = '';
         },
@@ -229,36 +231,54 @@ class RepoSearchDelegate extends SearchDelegate {
   }
 
   @override
-  Widget buildLeading(BuildContext context) {
-    return PreferredSize(
-      preferredSize: Size.fromHeight(kToolbarHeight),
-      child: AppBar(
-        backgroundColor:
-            Colors.white, // Customize the background color of the app bar
-        elevation: 0, // Remove the elevation
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back,
-              color: Colors.black), // Customize the back button icon color
-          onPressed: () {
-            close(context, null);
-          },
-        ),
-        title: TextField(
-          style: TextStyle(
-              color:
-                  Colors.black), // Customize the text color of the search input
-          cursorColor:
-              Colors.black, // Customize the cursor color of the search input
-          decoration: InputDecoration(
-            hintText: 'Search...', // Customize the placeholder text
-            hintStyle: TextStyle(
-                color: Colors.grey), // Customize the placeholder text color
-            border: InputBorder.none, // Remove the border
+  ThemeData appBarTheme(BuildContext context) {
+    return ThemeData(
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Color.fromARGB(255, 1, 62, 133),
+        foregroundColor: Colors.white,
+      ),
+      inputDecorationTheme: const InputDecorationTheme(
+        isDense: true,
+        isCollapsed: true,
+        filled: true,
+        fillColor: Color.fromARGB(255, 221, 221, 221),
+        contentPadding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
           ),
-          onChanged: (value) {
-            query = value;
-          },
+          borderSide: BorderSide(
+            color: Color.fromARGB(255, 1, 62, 133),
+          ),
         ),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color.fromARGB(255, 1, 62, 133),
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color.fromARGB(255, 1, 62, 133),
+          ),
+        ),
+        hintStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+      ),
+    );
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return AppBar(
+      backgroundColor: Color.fromARGB(255, 1, 62, 133),
+      elevation: 0,
+      leading: IconButton(
+        icon: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          close(context, null);
+        },
       ),
     );
   }
@@ -269,14 +289,36 @@ class RepoSearchDelegate extends SearchDelegate {
         repo['title'].toString().toLowerCase().contains(query.toLowerCase()));
     return ListView(
       children: results
-          .map((repo) => ListTile(
-                title: Text(repo['title']),
-                subtitle: Text('Uploaded by: ${repo['uploader']}'),
-                onTap: () {
-                  // Handle tapping on the result
-                  close(context, repo['link']);
-                },
-              ))
+          .map(
+            (repo) => Column(
+              children: [
+                SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  height: 70,
+                  width: MediaQuery.of(context).size.width - 30,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 226, 226, 226),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: ListTile(
+                    title: Text(
+                      repo['title'],
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    subtitle: Text('Uploaded by: ${repo['uploader']}'),
+                    onTap: () {
+                      launchUrl(Uri.parse(repo['link']));
+                    },
+                  ),
+                ),
+              ],
+            ),
+          )
           .toList(),
     );
   }
@@ -287,14 +329,36 @@ class RepoSearchDelegate extends SearchDelegate {
         repo['title'].toString().toLowerCase().contains(query.toLowerCase()));
     return ListView(
       children: results
-          .map((repo) => ListTile(
-                title: Text(repo['title']),
-                subtitle: Text('Uploaded by: ${repo['uploader']}'),
-                onTap: () {
-                  // Handle tapping on the suggestion
-                  close(context, repo['link']);
-                },
-              ))
+          .map(
+            (repo) => Column(
+              children: [
+                SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  height: 70,
+                  width: MediaQuery.of(context).size.width - 30,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 226, 226, 226),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: ListTile(
+                    title: Text(
+                      repo['title'],
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    subtitle: Text('Uploaded by: ${repo['uploader']}'),
+                    onTap: () {
+                      launchUrl(Uri.parse(repo['link']));
+                    },
+                  ),
+                ),
+              ],
+            ),
+          )
           .toList(),
     );
   }
