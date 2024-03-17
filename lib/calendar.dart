@@ -10,13 +10,13 @@ class EventModel {
   final String title;
   final String details;
   final DateTime date;
-  final String img;
+  final String url;
 
   EventModel({
     required this.title,
     required this.details,
     required this.date,
-    required this.img,
+    required this.url,
   });
 }
 
@@ -33,7 +33,7 @@ class FirebaseService {
         title: data['title'],
         details: data['details'],
         date: (data['date'] as Timestamp).toDate(),
-        img: data['img'],
+        url: data['url'],
       );
     }).toList();
   }
@@ -46,7 +46,7 @@ class FirebaseService {
           title: data['title'],
           details: data['details'],
           date: (data['date'] as Timestamp).toDate(),
-          img: data['img'],
+          url: data['url'],
         );
       }).toList();
     });
@@ -80,7 +80,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   eventModel.title,
                   eventModel.details,
                   eventModel.date,
-                  eventModel.img,
+                  eventModel.url,
                 ),
               ],
             ),

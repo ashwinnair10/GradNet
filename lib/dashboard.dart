@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables
 
-//import 'package:alumniyearbook/calendar.dart';
+import 'package:alumniyearbook/calendar.dart';
 import 'package:flutter/material.dart';
 import './button.dart';
 import './eventslist.dart';
@@ -194,12 +194,12 @@ class _DashboardState extends State<Dashboard> {
                   Spacer(),
                   IconButton(
                     onPressed: () => {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => CalendarPage(),
-                      //   ),
-                      // ),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CalendarPage(),
+                        ),
+                      ),
                     },
                     icon: Icon(
                       Icons.calendar_month,
