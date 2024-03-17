@@ -152,9 +152,9 @@ class _CalendarPageState extends State<CalendarPage> {
         ),
         eventOptions: EventOptions(
           emptyIcon: Icons.error,
-          emptyIconColor: Color.fromARGB(255, 28, 28, 28),
+          emptyIconColor: Color.fromARGB(255, 255, 255, 255),
           emptyText: 'No Event Found',
-          emptyTextColor: Color.fromARGB(255, 28, 28, 28),
+          emptyTextColor: Color.fromARGB(255, 255, 255, 255),
           loadingWidget: () {
             return CircularProgressIndicator(
               strokeWidth: 5,
