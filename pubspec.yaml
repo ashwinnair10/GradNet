@@ -44,6 +44,7 @@ dependencies:
   image_picker:
   flutter_pdfview: ^1.0.1
   firebase_storage:
+  file_picker: ^4.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
