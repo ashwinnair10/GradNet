@@ -7,21 +7,30 @@ The app is built using the Flutter framework for cross-platform mobile developme
 The backend of the app is powered by Firebase, providing authentication, real-time database, and cloud storage functionalities. Firebase Firestore is used for storing user data, while Firebase Authentication handles user authentication.
 ## Features
 ### Profile Management
-#### Create Profile: Alumni can create their profile by providing necessary information such as name, email, graduation year, roll number, phone number, location, and industry.
-#### Edit Profile: Users can update their profile information including name, email, phone number, location, and industry.
+#### Create Profile: 
+Alumni can create their profile by providing necessary information such as name, email, graduation year, roll number, phone number, location, and industry.
+#### Edit Profile: 
+Users can update their profile information including name, email, phone number, location, and industry.
 ### Friends
-#### Add Friends: Alumni can add friends by searching for their profiles.
-#### Remove Friends: Users can remove friends from their connections.
+#### Add Friends: 
+Alumni can add friends by searching for their profiles.
+#### Remove Friends: 
+Users can remove friends from their connections.
 ### Alumni Search
-#### Search Alumni: Alumni can search for other users based on various criteria such as name, graduation year, location, or industry.
+#### Search Alumni: 
+Alumni can search for other users based on various criteria such as name, graduation year, location, or industry.
 ### Memories
-#### Add Memories: Users can add and share memories such as photos or written posts with their connections.
+#### Add Memories: 
+Users can add and share memories such as photos or written posts with their connections.
 ### Yearbook
-#### View Yearbook: Alumni can view and download the digital yearbook of any year.
+#### View Yearbook: 
+Alumni can view and download the digital yearbook of any year.
 ### Events
-#### View Events: Users can stay updated with upcoming events organized by the alma mater.
+#### View Events: 
+Users can stay updated with upcoming events organized by the alma mater.
 ### Digital Repository
-#### Upload Documents: Alumni can upload github repositories and share it with everyone.
+#### Upload Documents: 
+Alumni can upload github repositories and share it with everyone.
 # Screenshots
 ![1](https://github.com/ashwinnair10/GradNet/assets/118875071/142922f3-0f3c-4116-a251-53783f01776d)
 ![2](https://github.com/ashwinnair10/GradNet/assets/118875071/fae26719-91f2-4aa0-84d1-3c2d910bea2d)
